@@ -312,7 +312,7 @@ jobs:
 #             fi
 - notify_on_sucess:
       docker:
-       - image : cimge/base:stable 
+       - image: cimge/base:stable 
       steps:
         - slack/notify:
             event: pass
