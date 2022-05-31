@@ -4,11 +4,11 @@ orb:
 
 commands:
   notify_on_failure:  
-        steps:
-          - slack/notify: 
-              event: fail
-              channel: devops
-              template: basic_fail_1
+    steps:
+      - slack/notify: 
+          event: fail
+          channel: devops
+          template: basic_fail_1
 
 #  commands:
 # #   destroy-environment:
