@@ -333,8 +333,6 @@ workflows:
           requires: [build-frontend]
       - notify_on_sucess:
           requires:               
-              - test-frontend
-              - test-backend
               - scan-backend
               - scan-frontend
 
