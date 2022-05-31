@@ -314,7 +314,7 @@ jobs:
       docker:
        - image : cimge/base:stable 
       steps:
-        - slack/notify
+        - slack/notify:
              event: pass
              channel: devops
              template: success_tagged_deployment_1           
