@@ -315,9 +315,9 @@ jobs:
        - image : cimge/base:stable 
       steps:
         - slack/notify:
-             event: pass
-             channel: devops
-             template: success_tagged_deployment_1           
+            event: pass
+            channel: devops
+            template: success_tagged_deployment_1           
 workflows:
   default:
     jobs:
