@@ -5,7 +5,7 @@ orb:
 commands:
   notify_on_failure:  
         steps:
-          - slack/notify
+          - slack/notify: 
               event: fail
               channel: devops
               template: basic_fail_1
