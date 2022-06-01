@@ -8,11 +8,11 @@ Parameters:
 
 Resources:
 
-  myVPC:
-  Type: AWS::EC2::VPC
-  Properties:
-    EnableDnsSupport: 'true'
-    EnableDnsHostnames: 'true'
+  VPC: 
+    Type: AWS::EC2::VPC
+    Properties:
+            CidrBlock: !Ref VpcCIDR
+            EnableDnsHostnames: true
 
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -28,7 +28,7 @@ Resources:
           FromPort: 3030
           ToPort: 3030
           CidrIp: 0.0.0.0/0
-        - VpcId: !Ref 'myVPC'
+        - VpcId: !Ref VPC
 
   EC2Instance:
     Type: AWS::EC2::Instance
