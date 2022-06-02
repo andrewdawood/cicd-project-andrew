@@ -306,6 +306,7 @@ jobs:
           command: |
             cd backend
             sudo npm install typescript -g
+            npm i
             npm run build 
             tar -czf artifact.tar.gz dist/* package*
 
