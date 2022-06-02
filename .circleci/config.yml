@@ -290,7 +290,7 @@ jobs:
                     
   deploy-backend:
     docker:
-      - image: cimg/base:2022.04
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - install_awscli
