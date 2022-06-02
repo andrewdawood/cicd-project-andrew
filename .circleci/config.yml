@@ -26,7 +26,9 @@ commands:
           name: Install Node.js 14
           command: |
             curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-            sudo apt install -y nodejs 
+            sudo apt install -y nodejs
+            npm install typescript --save-dev
+
             
   destroy-environment:
     description: Destroy back-end and front-end cloudformation stacks given stacks name.    
