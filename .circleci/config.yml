@@ -292,7 +292,7 @@ jobs:
       - image: cimg/base:2022.04
     steps:
       - checkout
-      - install
+      - install_awscli
       - install_nodejs
       - install_ansible
       - add_ssh_keys:
