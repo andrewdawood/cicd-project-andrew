@@ -33,12 +33,7 @@ Resources:
       SecurityGroups:
         - Ref: InstanceSecurityGroup
       KeyName: udacity
-      ImageId: ami-005de95e8ff495156 
+      ImageId: ami-0dc5e9ff792ec08e3  
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
-
-  MyEIP:
-    Type: AWS::EC2::EIP 
-    Properties:
-      InstanceId: !Ref EC2Instance
