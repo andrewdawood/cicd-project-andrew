@@ -20,12 +20,12 @@ commands:
             sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible -y
   install_nodejs:
-    description: Install Node.js 13
+    description: Install Node.js 14
     steps:
       - run:
-          name: Install Node.js 13
+          name: Install Node.js 14
           command: |
-            curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+            curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
             sudo apt install -y nodejs 
             
   destroy-environment:
@@ -247,9 +247,7 @@ jobs:
           name: Send migration results to kvbd.io
           command: |
               if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
-              then
-                  curl -d 1  https://kvdb.io/5oAmKsszTQkqjgXFAxDihS/migration_${CIRCLE_WORKFLOW_ID:0:7}
-              else  
+              then  
                   curl https://kvdb.io/${KVDB_BUCKET}/migration_${CIRCLE_WORKFLOW_ID:0:7} -d '1'
               fi 
               cat ~/project/backend/migrations_dump.txt
