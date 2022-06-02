@@ -259,7 +259,7 @@ jobs:
       - image: cimg/base:2022.04
     steps:
       - checkout
-      - install_aws_cli
+      - install_awscli
       - install_nodejs
       - restore_cache:
           keys: ["frontend-deps"]
@@ -292,7 +292,7 @@ jobs:
       - image: cimg/base:2022.04
     steps:
       - checkout
-      - install_aws_cli
+      - install_
       - install_nodejs
       - install_ansible
       - add_ssh_keys:
