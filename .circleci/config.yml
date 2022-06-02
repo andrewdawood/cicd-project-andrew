@@ -288,7 +288,7 @@ jobs:
       - revert-migrations     
                     
   deploy-backend:
-   docker:
+    docker:
       - image: cimg/base:2022.04
     steps:
       - checkout
